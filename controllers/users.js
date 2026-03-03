@@ -13,7 +13,7 @@ module.exports.signUp=async (req, res, next) => {
     req.login(registeredUser, (err) => {
       if (err) return next(err);
 
-      req.flash("success", "Welcome to WanderLust!");
+      req.flash("success", "Welcome to TanRoam!");
       const redirectUrl = res.locals.redirectUrl || "/listings";
       res.redirect(redirectUrl);
     });
@@ -25,7 +25,7 @@ module.exports.signUp=async (req, res, next) => {
 };
 
 module.exports.login= (req, res) => {
-    req.flash("success", "Welcome back to WanderLust!");
+    req.flash("success", "Welcome back to TanRoam!");
     const redirectUrl = res.locals.redirectUrl || "/listings";
     res.redirect(redirectUrl);
   };
